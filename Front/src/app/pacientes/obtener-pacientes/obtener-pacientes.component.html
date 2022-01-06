@@ -1,0 +1,31 @@
+
+<p-table [value]="pacientes">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>CedulaPaciente</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Estado</th>
+            <th>Telefono</th>
+            <th>Direccion</th>
+            <th>Fecha de Nacimiento</th>
+            <th>Sexo</th>
+            <th>EPS</th>
+            <th>Estado Civil</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-paciente>
+        <tr>
+            <td>{{paciente.cedulaPaciente}}</td>
+            <td>{{paciente.nombre}}</td>
+            <td>{{paciente.apellido}}</td>
+            <td>{{paciente.estado}}</td>
+            <td>{{paciente.telefono}}</td>
+            <td>{{paciente.direccion}}</td>
+            <td>{{paciente.fechaNacimiento}}</td>
+            <td>{{paciente.sexo}}</td>
+            <td>{{paciente.eps}}</td>
+            <td>{{paciente.estadoCivil}}</td>
+        </tr>
+    </ng-template>
+</p-table>

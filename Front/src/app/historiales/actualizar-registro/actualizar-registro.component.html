@@ -1,0 +1,40 @@
+<h2>Actualizar registro </h2>
+
+<form  [formGroup]="formRegistro" (ngSubmit)="crearRegistro()">
+    <div class="p-fluid">
+        <div class="p-field">
+            <label for="cod">Cod del Registro: </label>
+            <input id="cod" type="number" pInputText formControlName="codRegistro"> 
+        </div>
+        <div class="p-field">
+            <label for="fecha">Fecha del Registro:: </label>
+            <input id="fecha" type="date" pInputText formControlName="fechaRegistro"> 
+        </div>
+        <div class="p-field">
+            <label for="cedulaPaciente">Cedula del paciente: </label>
+            <input id="cedulaPaciente" type="number" pInputText formControlName="cedulaPaciente"> 
+        </div>
+        <div class="p-field">
+            <label for="proce">Procedimiento: </label>
+            <input id="proce" type="text" pInputText formControlName="procedimiento"> 
+        </div>
+        <div class="p-field">
+            <label for="desc">Descripción: </label>
+            <input id="desc" type="text" pInputText formControlName="descripcion"> 
+        </div>
+        <div class="p-field">
+            <label for="tipoProc">Tipo de procedimiento: </label>
+            <input id="TipoProc" type="text" pInputText formControlName="tipoProcedimiento"> 
+        </div>
+        <div class="p-field">
+            <label for="cedulaPersonal">Cedula del personal: </label>
+            <input id="fcedulaPersonaldn" type="number" pInputText formControlName="cedulaPersonal"> 
+        </div>
+        <div class="p-field">
+            <label for="estadoPaciente">Estado del paciente: </label>
+            <input id="estadoPaciente" type="text" pInputText formControlName="estadoPaciente"> 
+        </div>
+        <br>
+        <button [disabled]="formRegistro.invalid" pButton >Enviar</button>
+    </div>    
+</form>

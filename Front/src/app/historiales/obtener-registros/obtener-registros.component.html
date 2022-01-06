@@ -1,0 +1,27 @@
+
+<p-table [value]="registros">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>CodRegistro</th>
+            <th>FechaRegistro</th>
+            <th>Cedula del paciente</th>
+            <th>Procedimiento</th>
+            <th>Descripcion</th>
+            <th>Tipo de Procedimiento</th>
+            <th>Cedula del personal</th>
+            <th>Estado del Paciente</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-registro>
+        <tr>
+            <td>{{registro.codRegistro}}</td>
+            <td>{{registro.fechaRegistro}}</td>
+            <td>{{registro.cedulaPaciente}}</td>
+            <td>{{registro.procedimiento}}</td>
+            <td>{{registro.descripcion}}</td>
+            <td>{{registro.tipoProcedimiento}}</td>
+            <td>{{registro.cedulaPersonal}}</td>
+            <td>{{registro.estadoPaciente}}</td>
+        </tr>
+    </ng-template>
+</p-table>

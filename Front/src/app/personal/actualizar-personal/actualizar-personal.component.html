@@ -1,0 +1,32 @@
+<h2>Actualizar personal</h2>
+
+<form  [formGroup]="formPersonal" (ngSubmit)="actualizarPersonal()">
+    <div class="p-fluid">
+        <div class="p-field">
+            <label for="cedula">Número de cédula: </label>
+            <input id="cedula" type="number" pInputText formControlName="cedulaPersonal"> 
+        </div>
+        <div class="p-field">
+            <label for="tipo">Tipo: </label>
+            <input id="tipo" type="text" pInputText formControlName="tipo"> 
+        </div>
+        <div class="p-field">
+            <label for="nombre">Nombre: </label>
+            <input id="nombre" type="text" pInputText formControlName="nombre"> 
+        </div>
+        <div class="p-field">
+            <label for="apellido">Apellido: </label>
+            <input id="apellido" type="text" pInputText formControlName="apellido"> 
+        </div>
+        <div class="p-field">
+            <label for="departamento">Departamento: </label>
+            <input id="departamento" type="text" pInputText formControlName="departamento"> 
+        </div>
+        <div class="p-field">
+            <label for="telefono">Telefono: </label>
+            <input id="telefono" type="text" pInputText formControlName="telefono"> 
+        </div>
+        <br>
+        <button [disabled]="formPersonal.invalid" pButton >Enviar</button>
+    </div>    
+</form>

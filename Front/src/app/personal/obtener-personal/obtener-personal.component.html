@@ -1,0 +1,22 @@
+<p-table [value]="personal">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>CedulaPersonal</th>
+            <th>Tipo</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Departamento</th>
+            <th>Telefono</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-person>
+        <tr>
+            <td>{{person.cedulaPersonal}}</td>
+            <td>{{person.tipo}}</td>
+            <td>{{person.nombre}}</td>
+            <td>{{person.apellido}}</td>
+            <td>{{person.departamento}}</td>
+            <td>{{person.telefono}}</td>
+        </tr>
+    </ng-template>
+</p-table>

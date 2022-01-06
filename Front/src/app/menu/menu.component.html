@@ -1,0 +1,28 @@
+
+<p-menubar [model]="items">
+    <p-dropdown [options]="options" [(ngModel)]="selectedSearch" placeholder="Buscar por" optionLabel="name"></p-dropdown>
+    <form [formGroup]="formBusqueda" (ngSubmit)="consultar()">
+        <input type={{selectedSearch.tipo}} pInputText placeholder="{{selectedSearch.mensaje}}">
+        <button pButton>Enviar</button>
+    </form>
+    
+</p-menubar>
+
+<container-element [ngSwitch]="selectedMenu">
+    <app-crear-paciente *ngSwitchCase="'crearPaciente'"></app-crear-paciente>
+    <app-obtener-pacientes *ngSwitchCase="'obtenerPacientes'"></app-obtener-pacientes>
+    <app-actualizar-paciente *ngSwitchCase="'actualizarPaciente'"></app-actualizar-paciente>
+    <app-borrar-paciente *ngSwitchCase="'borrarPaciente'"></app-borrar-paciente>
+    <app-crear-personal *ngSwitchCase="'crearPersonal'"></app-crear-personal>
+    <app-obtener-personal *ngSwitchCase="'obtenerPersonal'"></app-obtener-personal>
+    <app-actualizar-personal *ngSwitchCase="'actualizarPersonal'"></app-actualizar-personal>
+    <app-borrar-personal *ngSwitchCase="'borrarPersonal'"></app-borrar-personal>
+    <app-crear-registro *ngSwitchCase="'crearRegistro'"></app-crear-registro>
+    <app-obtener-registros *ngSwitchCase="'obtenerRegistros'"></app-obtener-registros>
+    <app-actualizar-registro *ngSwitchCase="'actualizarRegistro'"></app-actualizar-registro>
+    <app-borrar-registro *ngSwitchCase="'borrarRegistro'"></app-borrar-registro>
+    <app-borrar-historial *ngSwitchCase="'borrarHistorial'"></app-borrar-historial>
+    <app-consultas-personal *ngSwitchCase="'consultarPersonal'" [cedulaPersonal]="busqueda" ></app-consultas-personal>
+    <p *ngSwitchDefault></p>
+ </container-element>
+
